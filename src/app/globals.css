@@ -1,0 +1,73 @@
+@import "tailwindcss";
+
+:root {
+  /* PRD Color System */
+  --color-primary: #4f46e5; /* Indigo-600 */
+  --color-income: #10b981; /* Emerald-500 */
+  --color-expense: #f43f5e; /* Rose-500 */
+  --color-background: #f8fafc; /* Slate-50 */
+  --color-foreground: #0f172a; /* Slate-900 */
+  --color-muted: #64748b; /* Slate-500 */
+  --color-border: #e2e8f0; /* Slate-200 */
+  --color-card: #ffffff;
+}
+
+@theme inline {
+  --color-background: var(--color-background);
+  --color-foreground: var(--color-foreground);
+  --color-primary: var(--color-primary);
+  --color-income: var(--color-income);
+  --color-expense: var(--color-expense);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+/* Mobile-first base styles */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background: var(--color-background);
+  color: var(--color-foreground);
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+  min-height: 100dvh;
+  margin: 0;
+  padding: 0;
+}
+
+/* Mobile Container - 480px max on desktop */
+.mobile-container {
+  max-width: 480px;
+  margin: 0 auto;
+  min-height: 100dvh;
+  background: var(--color-background);
+  position: relative;
+}
+
+/* Safe area for mobile keyboard */
+.safe-bottom {
+  padding-bottom: env(safe-area-inset-bottom, 16px);
+}
+
+/* Utility classes */
+.text-income {
+  color: var(--color-income);
+}
+
+.text-expense {
+  color: var(--color-expense);
+}
+
+.bg-income {
+  background-color: var(--color-income);
+}
+
+.bg-expense {
+  background-color: var(--color-expense);
+}
