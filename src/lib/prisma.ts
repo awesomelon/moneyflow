@@ -1,4 +1,4 @@
-import { PrismaClient } from '@/generated/prisma/client';
+import { PrismaClient } from '../generated/prisma/client';
 import { withAccelerate } from '@prisma/extension-accelerate';
 
 // PrismaClient 싱글톤 패턴 (개발 환경에서 핫 리로드 시 중복 인스턴스 방지)
